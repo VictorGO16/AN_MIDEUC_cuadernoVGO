@@ -1,4 +1,4 @@
-# Nombre del proyecto :  CUADERNO DE AUTOINDUCCIÓN - R y Estadísticas /BÁSICO                                                                            
+# Nombre del proyecto :  CUADERNO DE AUTOINDUCCI?N - R y Estad?sticas /B?SICO                                                                            
 # 
 # Quien crea          :  VGO                                   Fecha: 23jul2019                                                                     
 # Quien revisa        :                                        Fecha:                                                                             
@@ -18,13 +18,13 @@
 #                             1.1.1)  CREAR EN TABLA VARIABLE PROMEDIO DE CONSTRUCTO.
 #                             1.1.2)  CREAR EN TABLA PRINCIPAL VARIABLE PROMEDIO DE CONSTRUCTO.
 #                         1.2)  ETIQUETAR VARIABLES NOMINALES EN TABLA PRINCIPAL.
-#                         1.3)  CORRELACIÓN.
-#                             1.3.1)  CORRELACIÓN ENTRE ÍTEMS DEL MISMO CONSTRUCTO.
+#                         1.3)  CORRELACI?N.
+#                             1.3.1)  CORRELACI?N ENTRE ?TEMS DEL MISMO CONSTRUCTO.
 #                             1.3.2)  ALFA DE CRONBACH PARA VARIABLES DEL MISMO CONSTRUCTO.
 #                         1.4)  REGRESIONES.
 #                         1.5)  ANALISIS FACTORIAL.
-#                             1.5.1)  ANÁLISIS FACTORIAL PARA INDICADORES CUANTITATIVOS.
-#                             1.5.2)  ANÁLISIS FACTORIAL PARA CONJUNTOS DE MAS DE 1 FACTOR.
+#                             1.5.1)  AN?LISIS FACTORIAL PARA INDICADORES CUANTITATIVOS.
+#                             1.5.2)  AN?LISIS FACTORIAL PARA CONJUNTOS DE MAS DE 1 FACTOR.
 #                       2)      
 # 
 #                       3)                                                                                                   
@@ -34,7 +34,7 @@
 # Chequeos realizados :   
 #   
 
-#INSTALACIÓN DE LIBRERÍAS#
+#INSTALACI?N DE LIBRER?AS#
 
 # install.packages("psych")
 # install.packages("lattice")
@@ -42,7 +42,7 @@
 # install.packages("ppcor")
 # install.packages("QuantPsyc")
 
-#ACTIVACIÓN DE LIBRERÍAS#
+#ACTIVACI?N DE LIBRER?AS#
 
 library(psych)
 library(lattice)
@@ -60,7 +60,7 @@ estudio2012  <- data.frame(read.csv(file.choose(),              #TABLA PRINCIPAL
                 sep = ";")) 
 
 
-#CREAR BASE DE DATOS PARA CADA CATEGORIA# SOLO TABLA PRINCIPAL (B)          DUDA: ¿cÓMO HAGO QUE LA BASE DE DATOS ELIMINE LOS N.A?
+#CREAR BASE DE DATOS PARA CADA CATEGORIA# SOLO TABLA PRINCIPAL (B)          DUDA: ?c?MO HAGO QUE LA BASE DE DATOS ELIMINE LOS N.A?
 
 # PRINCIPAL B
 
@@ -78,11 +78,11 @@ insomnio                      <- with(estudio2012,
                                       data.frame(insom1,insom2,insom3,insom4,insom5))
 ayudar                        <- with(estudio2012,
                                       data.frame(ayude1,ayude2,ayude3,ayude4,ayude5))
-intuición                     <- with(estudio2012,
+intuici?n                     <- with(estudio2012,
                                       data.frame(intui1,intui2,intui3,intui4,intui5))
-intencióndeayudar             <- with(estudio2012,
+intenci?ndeayudar             <- with(estudio2012,
                                       data.frame(intay1,intay2,intay3,intay4,intay5))
-estrés                        <- with(estudio2012,
+estr?s                        <- with(estudio2012,
                                       data.frame(streu1,streu2,streu3,streu4,streu5))
 aborto                        <- with(estudio2012,
                                 data.frame(abor1,abor2,abor3,abor4,abor5))
@@ -112,11 +112,11 @@ intercambioext                <- with(estudio2012,
 #                                       (insom1+insom2+insom3+insom4+insom5)/5)
 # ayudar$ayude                  <- with(estudio2012,
 #                                       (ayude1+ayude2+ayude3+ayude4+ayude5)/5)
-# intuición$intui               <- with(estudio2012,
+# intuici?n$intui               <- with(estudio2012,
 #                                       (intui1+intui2+intui3+intui4+intui5)/5)
-# intencióndeayudar$intay       <- with(estudio2012,
+# intenci?ndeayudar$intay       <- with(estudio2012,
 #                                       (intay1+intay2+intay3+intay4+intay5)/5)
-# estrés$streu                  <- with(estudio2012,
+# estr?s$streu                  <- with(estudio2012,
 #                                       (streu1+streu2+streu3+streu4+streu5)/5)
 # aborto$abor                   <- with(estudio2012,
 #                                       (abor1+abor2+abor3+abor4+abor5)/5)
@@ -165,8 +165,8 @@ estudio2012$intex                   <- with(estudio2012,
 #ETIQUETAR CADA VARIABLE NOMINAL# 
 
 estudio2012$sitsent = factor(estudio2012$sitsent,
-                             levels=c("En una relación","Soltero/a","Es complicado"),
-                             labels=c("En una relación","Soltero/a","Es complicado"))
+                             levels=c("En una relaci?n","Soltero/a","Es complicado"),
+                             labels=c("En una relaci?n","Soltero/a","Es complicado"))
 
 estudio2012$genero = factor(estudio2012$genero,
                              levels=c("Femenino","Masculino"),
@@ -175,17 +175,17 @@ estudio2012$genero = factor(estudio2012$genero,
 estudio2012$zodiaco = factor(estudio2012$zodiaco,
                               levels=c("Aries (21 Marzo - 20 Abril)",
                                         "Tauro (21 Abril - 20 Mayo)",
-                                        "Géminis (21 Mayo - 20 Junio)", 
-                                        "Cáncer (21 Junio - 22 Julio)",
+                                        "G?minis (21 Mayo - 20 Junio)", 
+                                        "C?ncer (21 Junio - 22 Julio)",
                                         "Leo (23 Julio - 22 Agosto)", 
                                         "Virgo (23 Agosto - 22 Septiembre)",
                                         "Libra (23 Septiembre - 23 Octubre)",
-                                        "Escorpión (24 Octubre - 21 Noviembre)",
+                                        "Escorpi?n (24 Octubre - 21 Noviembre)",
                                         "Sagitario (22 Noviembre - 21 Diciembre)",
                                         "Acuario (21 Enero - 19 Febrero)",
                                         "Piscis (20 Febrero - 20 Marzo)"),
-                              labels=c("Aries","Tauro","Géminis","Cáncer",
-                                        "Leo","Virgo","Libra", "Escorpión", 
+                              labels=c("Aries","Tauro","G?minis","C?ncer",
+                                        "Leo","Virgo","Libra", "Escorpi?n", 
                                         "Sagitario","Acuario","piscis"))
 
 estudio2012$orienpol = factor(estudio2012$orienpol,
@@ -193,22 +193,22 @@ estudio2012$orienpol = factor(estudio2012$orienpol,
                                        "Centro Derecha","Derecha"))
 
 estudio2012$mencion = factor(estudio2012$mencion,
-                             levels=c("Clínica","Comunitaria","De la salud", 
+                             levels=c("Cl?nica","Comunitaria","De la salud", 
                                       "Educacional", 
                                       "Laboral/Organizacional"))
                 
 
 estudio2012$votop = factor(estudio2012$votop,
-                          levels=c("Sí","No","Era menor de edad"))
+                          levels=c("S?","No","Era menor de edad"))
 
 estudio2012$lugar = factor(estudio2012$lugar,
                            levels = c("Soy el hermano/la hermana del medio", 
                                       "Soy el hermano/la hermana mayor", "Soy el hermano/la hermana menor",
-                                      "Soy hijo/a único"))
+                                      "Soy hijo/a ?nico"))
 
 
 ############################################################
-#Analisis de correlación entre items de un mismo constructo
+#Analisis de correlaci?n entre items de un mismo constructo
 
 #
 round(cor(aborto, 
@@ -227,7 +227,7 @@ round(cor(ayudar,
           use = "pairwise.complete.obs"),
       2)
 #
-round(cor(estrés, 
+round(cor(estr?s, 
           use = "pairwise.complete.obs"), 
       2) 
 #
@@ -239,7 +239,7 @@ round(cor(insomnio,
           use = "pairwise.complete.obs"),
       2)
 #
-round(cor(intencióndeayudar,
+round(cor(intenci?ndeayudar,
           use = "pairwise.complete.obs"),
       2)
 #
@@ -247,7 +247,7 @@ round(cor(intercambioext,
           use = "pairwise.complete.obs"),
       2)
 #
-round(cor(intuición, 
+round(cor(intuici?n, 
           use = "pairwise.complete.obs"),
       2)
 #
@@ -309,9 +309,9 @@ alpha(desconfianza,
 #       check.keys = TRUE)
 
 
-alpha(estrés,
+alpha(estr?s,
       check.keys = TRUE)
-# alpha(with(estrés,
+# alpha(with(estr?s,
 #             cbind(streu1,streu2,streu3,streu4,streu5)),
 #       check.keys = TRUE)
 
@@ -323,16 +323,16 @@ alpha(insomnio,
 #       check.keys = TRUE)
 
 
-alpha(intencióndeayudar,
+alpha(intenci?ndeayudar,
       check.keys = TRUE)
-# alpha(with(intencióndeayudar,
+# alpha(with(intenci?ndeayudar,
 #             cbind(intay1,intay2,intay3,intay4,intay5)),
 #       check.keys = TRUE)
 
 
-alpha(intuición,
+alpha(intuici?n,
       check.keys = TRUE)
-# alpha(with(intuición,
+# alpha(with(intuici?n,
 #             cbind(intui1,intui2,intui3,intui4,intui5)),
 #       check.keys = TRUE)
 
@@ -380,8 +380,8 @@ alpha(vidauniversitaria,
 #       check.keys = TRUE)
 
 
-#Si el programa arroja errores de gráficos aplicar 
-#la función de apagado de dispositivos gráficos: 
+#Si el programa arroja errores de gr?ficos aplicar 
+#la funci?n de apagado de dispositivos gr?ficos: 
 
                       # dev.off()
 
@@ -398,15 +398,15 @@ fa.parallel(ayudar)
 #
 fa.parallel(desconfianza)
 #
-fa.parallel(estrés)
+fa.parallel(estr?s)
 #
 fa.parallel(insomnio)
 #
-fa.parallel(intencióndeayudar)
+fa.parallel(intenci?ndeayudar)
 #
 fa.parallel(intercambioext)
 #
-fa.parallel(intuición)
+fa.parallel(intuici?n)
 #
 fa.parallel(personalidad)
 #
@@ -420,7 +420,7 @@ fa.parallel(valormedioambiental)
 #
 fa.parallel(vidauniversitaria)
 
-#Análisis de Factorial para conjuntos de mas de 1 factor# 
+#An?lisis de Factorial para conjuntos de mas de 1 factor# 
 
 #
 fa(aborto,
