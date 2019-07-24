@@ -7,14 +7,6 @@
 # 
 # Objetivos           :                                                                                                                           
 # 
-
-#PRUEBAAAAAA
-
-
-
-#FUNCIONAAAA
-
-
 # Pasos               : 0) RECURSOS.
 #                         0.1)  DESCARGAR LIBRERIAS. 
 #                         0.2)  CARGAR LIBRERIAS. 
