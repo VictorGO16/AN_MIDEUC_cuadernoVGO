@@ -77,3 +77,5 @@ library(neuralnet)
 aqui estamos intentando compartir un codigo
 
 # y parece que funciona bien 
+
+vamos a probar 
