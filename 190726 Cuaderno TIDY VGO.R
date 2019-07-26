@@ -1,7 +1,7 @@
 
 ggplot(data = mpg)
 geom_point(mapping = aes(x = displ, y = hwy))
-filter(mpg, cyl == 8) 
+filter(mpg, cyl == 8)
 ggplot(data = diamonds)
 filter (diamonds, carat == 3)
 
@@ -67,5 +67,7 @@ view(filter(flights, month == 11 | month == 12))
 filter(flights, !(arr_delay > 120 | dep_delay > 120))
 
 filter(flights, arr_delay <= 120, dep_delay <= 120)
- 
-#sí, está reconociendo 
+
+#sï¿½, estï¿½ reconociendo
+
+library(psych)
