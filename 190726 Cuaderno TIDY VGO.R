@@ -76,8 +76,12 @@ library(neuralnet)
 
 aqui estamos intentando compartir un codigo
 
-# y parece que funciona bien 
+# y parece que funciona bien
 
-vamos a probar 
+vamos a probar
 
 Si guardo en R de VGO
+
+Y escribo aca
+
+al menos este cambio es local
