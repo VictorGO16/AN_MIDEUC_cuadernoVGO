@@ -79,3 +79,5 @@ aqui estamos intentando compartir un codigo
 # y parece que funciona bien 
 
 vamos a probar 
+
+Si guardo en R de VGO
