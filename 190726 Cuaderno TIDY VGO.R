@@ -68,6 +68,12 @@ filter(flights, !(arr_delay > 120 | dep_delay > 120))
 
 filter(flights, arr_delay <= 120, dep_delay <= 120)
 
-#s�, est� reconociendo
+#s???, est??? reconociendo
 
 library(psych)
+
+library(neuralnet)
+
+aqui estamos intentando compartir un codigo
+
+# y parece que funciona bien 
